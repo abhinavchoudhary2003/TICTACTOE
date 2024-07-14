@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: #8e44ad;
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gameInfo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff6347; /* Tomato */
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.info {
+    font-size: 22px;
+    color: #1abc9c; /* Turquoise */
+}
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #3498db; /* Peter River */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+    transition: background-color 0.3s;
+}
+
+#reset:hover {
+    background-color: #2980b9; /* Belize Hole */
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box {
+    border: 2px solid #ecf0f1; /* Light Grey */
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    background-color: #2c3e50; /* Wet Asphalt */
+    color: #ecf0f1; /* Light Grey */
+}
+
+.box:hover {
+    background-color: #34495e; /* Midnight Blue */
+}
+
+.boxtext {
+    transition: transform 0.2s ease-in-out;
+}
+
+.boxtext:empty:hover {
+    transform: scale(1.1);
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.line {
+    background-color: #8e44ad; /* Wisteria */
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out, transform 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 34px;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
